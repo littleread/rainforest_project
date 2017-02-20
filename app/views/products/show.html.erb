@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<table class="table table-striped table-condensed">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+  
+  <tbody>
+    <tr>
+      <td><%= @product.name %></td>
+      <td><%= @product.description %></td>
+      <td><%= @product.formatted_price %></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Reviews</h3>
+<% @product.reviews.each do |review| %>
+  <p>
+    <%= review.comment %>
+    <br>
+    Added on: <%= review.created_at %>
+  </p>
+<% end %>
+
+
+
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Back', products_path %>
