@@ -1,6 +1,7 @@
 body {
   background-color: #fff;
   color: #333;
+  padding: 0.5em;
 }
 
 body, p, ol, ul, td {
